@@ -1,0 +1,51 @@
+---
+title: "ST 558 HW1"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Questions in Step 3
+
+### What do you think being a data scientist is about?
+
+Data science is such a large field that it can be difficult to define. But in the broadest sense, I think being a data scientist is about being able to work with data (often big data) and being able to translate it into useful insights in whatever your field is. scientistcafe.com splits data science into three main skill tracks: engineering, analysis, and modeling/inference. Different data scientists may focus on different skill tracks; together, they form the skills necessary for a team to gain meaningful insights from raw rata.
+
+### What differences/similarities do you see between data scientists and statisticians?
+
+Data scientists and statisticians are similar in that they work with and model data to gain insights on their topic of interest. But there are some key differences between data scientists and statisticians:
+
+1. A big difference between data scientists and statisticians is the types of data they work with, as statisticians typically work with smaller data sets in well-formatted files, but data scientists can work with much larger and more diverse types of data, often too large to store on a computer's memory, and not structured/formatted well enough to be useful without lots of pre-processing and data engineering. 
+2. Because of the different types of data they work with, the modeling of statisticians and data scientists can be different too. Statisticians typically spend much more of their time modeling their data sets, trying to make statistical inferences from a small set of data. On the other hand, modeling is typically less time consuming for data scientists, as they have an abundance of data to work with. 
+3. Data scientists are typically embedded in the production system and closer to the data generation procedures, leading to them focusing more on delivering actionable results than statisticians.
+
+### How do you view yourself in relation to these two areas?
+
+As someone with a bachelors in statistics, I feel like I have been more closely tied to statistics than data scientists in my academic career so far, working more on understanding the math behind the foundations of statistics and the basics of statistical modeling and procedures. However, I enjoy everything I have learned about data science and could see myself working more as a data scientist in my future career. I enjoy working with R, and even though data wrangling can be a pain, the payoff of being able to create interesting models and visualizations is a very rewarding payoff, and something I could see myself doing for the forseeable future.
+
+## R Code in Step 3
+
+```{r}
+y <- density(iris$Petal.Width)
+```
+
+```{r}
+# determine the class of y
+class(y)
+
+# determine the type of y
+typeof(y)
+
+# determine the structure of y
+str(y)
+```
+
+The above R code chunk determines the class, type, and structure of the object y, which I defined above using the density() function on the Petal.Width variable in the iris data frame. The below chunk, which does not output the code due to echo being set to false, plots the function of y.
+
+```{r}
+#| echo: false
+
+# plot the function of y
+plot(x= y$x, y = y$y)
+```
